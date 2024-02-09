@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+  </head>
   <body>
-    <table width="100%">
-      <tbody>
-        <tr>
-          <td valign="top">
-            <button>Collapse All</button>
+    <div class="d-flex">
+      <div class="flex-fill">
+        <ul class="list-group wd-modules">
+          <button>Collapse All</button>
             <button>View Progress</button>
             <select>
               <option>Publish All</option>
@@ -60,9 +66,10 @@
                 </ul>
               </li>
             </ul>
-          </td>
-          <td valign="top">
-            <h2>Course Status</h2>
+        </ul>
+      </div>
+      <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px;">
+        <h3>Course Status</h3>
             <table>
               <tbody>
                 <tr>
@@ -93,9 +100,7 @@
               11:45am</a></li>
               <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
             </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      </div>
+    </div>
   </body>
 </html>

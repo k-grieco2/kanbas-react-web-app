@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/Kanbas/styles.css" />
-    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
     <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
   </head>
   <body>
-    <table width="100%">
-      <tbody>
-        <tr>
-          <td valign="top">
-            <ul class="wd-kanbas-navigation">
-              <li><a href="http://northeastern.edu">N</a></li>
-              <li><a href="/Kanbas/Account/Profile/screen.html">
-                <i class="fas fa-user-circle" style="color: white;"></i><br>Account</a></li>
-              <li>
-                <a href="/Kanbas/Dashboard/screen.html">
-                  <i class="fas fa-tachometer-alt" style="color: red;"></i><br>Dashboard</a>
-              </li>
-              <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">
-                <i class="fa fa-book" style="color: red;"></i><br>Courses</a> </li>
-              <li><a href="#"><i class="fa fa-calendar" style="color: red;"></i><br>Calendar</a></li>
-              <li><a href="#"><i class="fa fa-inbox" style="color: red;"></i><br>Inbox</a></li>
-              <li><a href="#"><i class="fa fa-clock" style="color: red;"></i><br>History</a></li>
-              <li><a href="#"><i class="fas fa-network-wired" style="color: red;"></i><br>Studio</a></li>
-              <li><a href="#"><i class="fas fa-sign-out-alt" style="color: red;"></i><br>Commons</a></li>
-              <li><a href="#"><i class="far fa-question-circle" style="color: red;"></i><br>Help</a></li>
-            </ul>
-          </td>
-          <td valign="top">
-            <ul class="wd-navigation">
-              <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-              <li><a href="#">Modules</a></li>
-              <li><a href="#">Piazza</a></li>
-              <li><a href="#">Zoom Meetings</a></li>
-              <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-              <li><a href="#">Quizzes</a></li>
-              <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-              <li><a href="#">People</a></li>
-              <li><a href="#">Panopto Video</a></li>
-              <li><a href="#">Discussions</a></li>
-              <li><a href="#">Announcements</a>
-              </li>
-              <li><a href="#">Pages</a></li>
-              <li><a href="#">Files</a></li>
-              <li><a href="#">Rubrics</a></li>
-              <li><a href="#">Outcomes</a></li>
-              <li><a href="#">Collaborations</a>
-              </li>
-              <li><a href="#">Syllabus</a></li>
-              <li><a href="/Kanbas/Courses/Settings/Course Details/screen.html">Settings</a></li>
-            </ul>
-          </td>
-          <td valign="top">
-            <button>Collapse All</button>
+    <div class="d-flex">
+      <div class="d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+          <li><a href="http://northeastern.edu">N</a></li>
+          <li><a href="/Kanbas/Account/Profile/screen.html">
+            <i class="fas fa-user-circle" style="color: white;"></i><br>Account</a></li>
+          <li>
+            <a href="/Kanbas/Dashboard/screen.html">
+              <i class="fas fa-tachometer-alt" style="color: red;"></i><br>Dashboard</a>
+          </li>
+          <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">
+            <i class="fa fa-book" style="color: red;"></i><br>Courses</a> </li>
+          <li><a href="#"><i class="fa fa-calendar" style="color: red;"></i><br>Calendar</a></li>
+          <li><a href="#"><i class="fa fa-inbox" style="color: red;"></i><br>Inbox</a></li>
+          <li><a href="#"><i class="fa fa-clock" style="color: red;"></i><br>History</a></li>
+          <li><a href="#"><i class="fas fa-network-wired" style="color: red;"></i><br>Studio</a></li>
+          <li><a href="#"><i class="fas fa-sign-out-alt" style="color: red;"></i><br>Commons</a></li>
+          <li><a href="#"><i class="far fa-question-circle" style="color: red;"></i><br>Help</a></li>
+        </ul>
+      </div>
+      <div class="d-none d-md-block">
+        <ul class="wd-navigation">
+          <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+          <li><a href="#">Modules</a></li>
+          <li><a href="#">Piazza</a></li>
+          <li><a href="#">Zoom Meetings</a></li>
+          <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+          <li><a href="#">Quizzes</a></li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">Panopto Video</a></li>
+          <li><a href="#">Discussions</a></li>
+          <li><a href="#">Announcements</a>
+          </li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Files</a></li>
+          <li><a href="#">Rubrics</a></li>
+          <li><a href="#">Outcomes</a></li>
+          <li><a href="#">Collaborations</a>
+          </li>
+          <li><a href="#">Syllabus</a></li>
+          <li><a href="/Kanbas/Courses/Settings/Course Details/screen.html">Settings</a></li>
+        </ul>
+      </div>
+      <div class="flex-fill">
+        <ul class="list-group wd-modules">
+          <button>Collapse All</button>
             <button>View Progress</button>
             <select>
               <option>Publish All</option>
@@ -109,9 +109,10 @@
                 </ul>
               </li>
             </ul>
-          </td>
-          <td valign="top">
-            <h2>Course Status</h2>
+        </ul>
+      </div>
+      <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px;">
+        <h3>Course Status</h3>
             <table>
               <tbody>
                 <tr>
@@ -142,9 +143,7 @@
               11:45am</a></li>
               <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
             </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      </div>
+    </div>
   </body>
 </html>
