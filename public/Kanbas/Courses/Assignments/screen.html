@@ -62,15 +62,20 @@
               <button class="float-end"><i class="fas fa-ellipsis-v"></i></button>
               <button class="float-end" style="color: white; background-color: red;"><i class="far fa-plus"></i>Assignment</button>
               <button class="float-end"><i class="far fa-plus"></i>Group</button><br>
-            </div>
+            </div><br>
                       <hr>
-                      <ul class="list-group">
-                        <li class="list-group-item list-group-item-secondary">
-                          <i class="fas fa-sort-down"></i> Assignments
-                          <div class="float-end rounded-pill">
-                            40% of Total
-                          </div>
-                          <select id="edit-list" class="float-end">
+                      <ul class="list-group wd-modules">
+                        <li class="list-group-item">
+                          <div>
+                            <i class="fa fa-ellipsis-v"></i> Assignments
+                            <span class="float-end">
+                              <span class="nav md-pills nav-justified pills-rounded pills-outline-grey">
+                                40% of Total
+                              </span>
+                              <i class="fa fa-plus ms-2"></i>
+                              <i class="fa fa-ellipsis-v ms-2"></i>
+                              <!--<select class="float-end">
+                              <option><button><i class="fas fa-ellipsis-v"></i></option>
                               <option>Edit</option>
                               <option>Speed Grader</option>
                               <option>Duplicate</option>
@@ -79,115 +84,226 @@
                               <option>Send To...</option>
                               <option>Copy To...</option>
                               <option>Share to Commons</option>
-                          </select>
-                          <label for="edit-list"><button><i class="fas fa-ellipsis-v"></i></button></label>
-                        </li>
-                        <li class="list-group-item wd-left-green-stripe"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">
-                        <i class="far fa-clipboard-list"></i>A1 SETUP</a><br>
-                        <a href="#">Multiple Modules</a>
-                        | Not available yet </li>
-                        <li class="list-group-item wd-left-green-stripe"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">
-                          <i class="far fa-clipboard-list">A2 HTML</a><br>
-                        <a href="#">Multiple Modules</a>
-                        | Not available yet </li>
-                        <li class="list-group-item wd-left-green-stripe"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">
-                          <i class="far fa-clipboard-list">A3 - JS + React</a><br>
-                        <a href="#">Multiple Modules</a>
-                        | Not available yet </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">
-                          <i class="far fa-clipboard-list">A4 - STATE + REDUX</a><br>
-                        <a href="#">Multiple Modules</a>
-                        | Not available yet </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">
-                          <i class="far fa-clipboard-list">A5 - NODE + SESSION </a><br>
-                        <a href="#">Multiple Modules</a>
-                        | Not available yet </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">
-                          <i class="far fa-clipboard-list">A6 - MONGO + MONGOOSE</a><br>
-                        <a href="#">Multiple Modules</a>
-                        | Not available yet
-                      <i class="float-end fas fa-check-circle" style="color: forestgreen;"></i></li>
-                      </ul><br>
-                      
-                      <ul class="list-group">
-                        <li class="list-group-item list-group-item-secondary">
-                          <i class="fas fa-sort-down"></i>Quizzes 
-                          <div class="float-end">
-                            10% of Total
+                              </select>-->
+                            </span>
                           </div>
-                          <select class="float-end">
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                          </select>
+                          <ul class="list-group">
+                            <li class="list-group-item">
+                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
+                              A1 - SETUP</a><br>
+                              <a href="#">Multiple Modules</a>
+                              | Not available yet
+                              <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                              </span>
+                            </li>
+                            <li class="list-group-item">
+                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
+                              A2 - HTML</a><br>
+                              <a href="#">Multiple Modules</a>
+                              | Not available yet
+                              <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                              </span>
+                            </li>
+                            <li class="list-group-item">
+                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
+                              A3 - JS + React</a><br>
+                              <a href="#">Multiple Modules</a>
+                              | Not available yet
+                              <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                              </span>
+                            </li>
+                            <li class="list-group-item">
+                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
+                              A4 - STATE + REDUX</a><br>
+                              <a href="#">Multiple Modules</a>
+                              | Not available yet
+                              <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                              </span>
+                            </li>
+                            <li class="list-group-item">
+                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
+                              A5 - NODE + SESSION</a><br>
+                              <a href="#">Multiple Modules</a>
+                              | Not available yet
+                              <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                              </span>
+                            </li>
+                            <li class="list-group-item">
+                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
+                              A6 - MONGO + MONGOOSE</a><br>
+                              <a href="#">Multiple Modules</a>
+                              | Not available yet
+                              <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                              </span>
+                            </li>
+                          </ul>
+                          </li>
+                          <li class="list-group-item">
+                            <div>
+                              <i class="fa fa-ellipsis-v"></i> Quizzes
+                              <span class="float-end">
+                                <span class="nav md-pills nav-justified pills-rounded pills-outline-grey">
+                                  10% of Total
+                                </span>
+                                <i class="fa fa-plus ms-2"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                <!--<select class="float-end">
+                                <option><button><i class="fas fa-ellipsis-v"></i></option>
+                                <option>Edit</option>
+                                <option>Speed Grader</option>
+                                <option>Duplicate</option>
+                                <option>Delete</option>
+                                <option>Move To...</option>
+                                <option>Send To...</option>
+                                <option>Copy To...</option>
+                                <option>Share to Commons</option>
+                                </select>-->
+                              </span>
+                            </div>
+                            <ul class="list-group">
+                              <li class="list-group-item">
+                                <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pencil-alt"></i>
+                                <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q1 - HTML</a><br>
+                                <a href="#">Multiple Modules</a>
+                                | Not available yet </li>
+                                <span class="float-end">
+                                  <i class="fa fa-check-circle text-success"></i>
+                                  <i class="fa fa-ellipsis-v ms-2"></i>
+                                </span>
+                              </li>
+                              <li class="list-group-item">
+                                <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pencil-alt"></i>
+                                <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q2 - CSS</a><br>
+                                <a href="#">Multiple Modules</a>
+                                | Not available yet </li>
+                                <span class="float-end">
+                                  <i class="fa fa-check-circle text-success"></i>
+                                  <i class="fa fa-ellipsis-v ms-2"></i>
+                                </span>
+                              </li>
+                              <li class="list-group-item">
+                                <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pencil-alt"></i>
+                                <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q3 - JS, ES6</a><br>
+                                <a href="#">Multiple Modules</a>
+                                | Not available yet </li>
+                                <span class="float-end">
+                                  <i class="fa fa-check-circle text-success"></i>
+                                  <i class="fa fa-ellipsis-v ms-2"></i>
+                                </span>
+                              </li>
+                              <li class="list-group-item">
+                                <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pencil-alt"></i>
+                                <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q4 - NODE</a><br>
+                                <a href="#">Multiple Modules</a>
+                                | Not available yet </li>
+                                <span class="float-end">
+                                  <i class="fa fa-check-circle text-success"></i>
+                                  <i class="fa fa-ellipsis-v ms-2"></i>
+                                </span>
+                              </li>
+                              <li class="list-group-item">
+                                <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pencil-alt"></i>
+                                <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q5 - MONGO</a><br>
+                                <a href="#">Multiple Modules</a>
+                                | Not available yet </li>
+                                <span class="float-end">
+                                  <i class="fa fa-check-circle text-success"></i>
+                                  <i class="fa fa-ellipsis-v ms-2"></i>
+                                </span>
+                              </li>
+                            </ul>
+                          </li>
+                            <li class="list-group-item">
+                              <div>
+                                <i class="fa fa-ellipsis-v"></i> Exams
+                                <span class="float-end">
+                                  <span class="nav md-pills nav-justified pills-rounded pills-outline-grey">
+                                    20% of Total
+                                  </span>
+                                  <i class="fa fa-plus ms-2"></i>
+                                  <i class="fa fa-ellipsis-v ms-2"></i>
+                                  <!--<select class="float-end">
+                                  <option><button><i class="fas fa-ellipsis-v"></i></option>
+                                  <option>Edit</option>
+                                  <option>Speed Grader</option>
+                                  <option>Duplicate</option>
+                                  <option>Delete</option>
+                                  <option>Move To...</option>
+                                  <option>Send To...</option>
+                                  <option>Copy To...</option>
+                                  <option>Share to Commons</option>
+                                  </select>-->
+                                </span>
+                              </div>
+                              <ul class="list-group">
+                                <li class="list-group-item">
+                                  <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pen-square"></i>
+                                  <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Midterm</a><br>
+                                  <a href="#">Multiple Modules</a>
+                                  | Not available yet </li>
+                                  <span class="float-end">
+                                    <i class="fa fa-check-circle text-success"></i>
+                                    <i class="fa fa-ellipsis-v ms-2"></i>
+                                  </span>
+                                </li>
+                                <li class="list-group-item">
+                                  <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pen-square"></i>
+                                  <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Final</a><br>
+                                  <a href="#">Multiple Modules</a>
+                                  | Not available yet </li>
+                                  <span class="float-end">
+                                    <i class="fa fa-check-circle text-success"></i>
+                                    <i class="fa fa-ellipsis-v ms-2"></i>
+                                  </span>
+                                </li>
+                            </ul>
+                          </li>
+                          <li class="list-group-item">
+                            <div>
+                              <i class="fa fa-ellipsis-v"></i> Project
+                              <span class="float-end">
+                                <span class="nav md-pills nav-justified pills-rounded pills-outline-grey">
+                                  30% of Total
+                                </span>
+                                <i class="fa fa-plus ms-2"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                                <!--<select class="float-end">
+                                <option><button><i class="fas fa-ellipsis-v"></i></option>
+                                <option>Edit</option>
+                                <option>Speed Grader</option>
+                                <option>Duplicate</option>
+                                <option>Delete</option>
+                                <option>Move To...</option>
+                                <option>Send To...</option>
+                                <option>Copy To...</option>
+                                <option>Share to Commons</option>
+                                </select>-->
+                              </span>
+                            </div>
+                            <li class="list-group-item">
+                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-project-diagram"></i>
+                              <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Project</a><br>
+                              <a href="#">Multiple Modules</a>
+                              | Not available yet </li>
+                              <span class="float-end">
+                                <i class="fa fa-check-circle text-success"></i>
+                                <i class="fa fa-ellipsis-v ms-2"></i>
+                              </span>
+                            </li>
+                          </ul>
                         </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q1 - HTML</a><br>
-                          <a href="#">Multiple Modules</a>
-                        | Not available yet </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q2 - CSS</a><br>
-                          <a href="#">Multiple Modules</a>
-                        | Not available yet </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q3 - JS, ES6 <br></a>
-                          <a href="#"> Multiple Modules</a>
-                        | Not available yet </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q4 - NODE</a><br>
-                          <a href="#"> Multiple Modules</a>
-                        | Not available yet </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q5 - MONGO</a><br>
-                          <a href="#">Multiple Modules</a>
-                        | Not available yet </li>
-                      </ul>
-                      
-                      <ul class="list-group">
-                        <li class="list-group-item list-group-item-secondary">
-                          <i class="fas fa-sort-down"></i>Exams
-                          <div class="float-end">
-                            20% of Total
-                          </div>
-                          <select class="float-end">
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                          </select>
-                        </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Midterm</a><br>
-                          <a href="#">Multiple Modules</a>
-                        | Not available yet </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Final</a><br>
-                          <a href="#">Multiple Modules</a>
-                        | Not available yet</li>
-                      </ul>
-                      
-                      <ul class="list-group">
-                        <li class="list-group-item list-group-item-secondary">
-                          <i class="fas fa-sort-down"></i>Project
-                          <div class="float-end">
-                            30% of Total
-                          </div>
-                          <select class="float-end">
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                          </select>
-                        </li>
-                        <li class="list-group-item"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">Project </a><br>
-                          <a href="#">Multiple Modules</a>
-                        | Not available yet </li>
                       </ul>
           </td>
         </tr>

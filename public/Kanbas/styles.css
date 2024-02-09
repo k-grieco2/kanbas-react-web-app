@@ -5,8 +5,3 @@ body {
   body * {
     font-family: Arial, Helvetica, sans-serif;
   }
-
-  .wd-left-green-stripe {
-    border-left: 5px;
-    border-left-color: green;
-  }
