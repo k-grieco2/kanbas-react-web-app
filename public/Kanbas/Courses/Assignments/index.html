@@ -5,15 +5,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   </head>
   <body>
-    <input type="text" placeholder="Search for Assignments" class="form-control">
-            <button class="form-control">Group</button>
-            <button class="form-control">Assignment</button>
-            <select>
-              <option class="form-control">Edit Assignment Dates</option>
-            </select>
+    <input type="text" placeholder="Search for Assignments" class="form-control w-25">
+            <button class="float-end">+Group</button>
+            <button class="float-end" style="color: red; text-decoration-color: white;">+Assignment</button>
+            <button><i class="fas fa-ellipsis-v"></i></button>
             <hr>
-            <h4>ASSIGNMENTS 40% of Total
-              <select>
+            <h4 class="list-group">ASSIGNMENTS 40% of Total
+              <button><i class="fas fa-ellipsis-v"></i>
+                <select>
                 <option>Edit</option>
                 <option>Speed Grader</option>
                 <option>Duplicate</option>
@@ -22,7 +21,7 @@
                 <option>Send To...</option>
                 <option>Copy To...</option>
                 <option>Share to Commons</option>
-              </select>
+              </select></button>
             </h4>
             <ul>
               <li><a href="/Kanbas/Courses/Assignments/Edit/screen.html">
