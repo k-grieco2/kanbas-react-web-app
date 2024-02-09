@@ -10,6 +10,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
+    <div class="d-block d-md-none fixed-top" style="background-color: black; color: white; text-align: center;">
+      <i class="fas fa-bars wd-float-left"></i>
+      <i class="fas fa-chevron-down wd-float-right"></i>
+      CS4550.12631.202410 <br> Modules
+    </div>
     <div class="d-flex">
       <div class="d-none d-md-block">
         <ul class="wd-kanbas-navigation">
@@ -53,11 +58,6 @@
           <li><a href="#">Syllabus</a></li>
           <li><a href="/Kanbas/Courses/Settings/Course Details/screen.html">Settings</a></li>
         </ul>
-      </div>
-      <div class="d-block d-md-none fixed-top" style="background-color: black; color: white; text-align: center;">
-        <i class="fas fa-bars wd-float-left"></i>
-        <i class="fas fa-chevron-down wd-float-right"></i>
-        CS4550.12631.202410 <br> Modules
       </div>
       <div class="flex-fill">
         <div class="float-end">
@@ -243,18 +243,18 @@
       <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px;">
         <h3>Course Status</h3>
         <span>
-          <ul class="wd-modules">
-            <li>
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-secondary">
               <button><i class="fas fa-ban"></i>Unpublish</button>
-              <button class="disabled"><i class="fa fa-check-circle"></i>Published</button>
+              <button class="disabled" style="background-color: forestgreen;"><i class="fa fa-check-circle"></i>Published</button>
             </li>
-            <li><a href="#"><button><i class="far fa-file-import"></i>Import Existing Content</button></a></li>
-            <li><a href="#"><button><i class="fas fa-cloud-upload-alt"></i>Import From Commons</button></a></li>
-            <li><a href="#"><button><i class="fas fa-bullseye"></i>Choose Home Page</button></a></li>
-            <li><a href="#"><button><i class="fas fa-chart-bar"></i>View Course Stream</button></a></li>
-            <li><a href="#"><button><i class="fas fa-bullhorn"></i>>New Announcement</button</a></li>
-            <li><a href="#"><button><i class="fas fa-chart-bar"></i>New Analytics</button></New></a></li>
-            <li><a href="#"><button><i class="far fa-bell"></i>View Course Notifications</button></a></li>
+            <li class="list-group-item list-group-item-secondary"><a href="#"><button><i class="far fa-file-import"></i>Import Existing Content</button></a></li>
+            <li class="list-group-item list-group-item-secondary"><a href="#"><button><i class="fas fa-cloud-upload-alt"></i>Import From Commons</button></a></li>
+            <li class="list-group-item list-group-item-secondary"><a href="#"><button><i class="fas fa-bullseye"></i>Choose Home Page</button></a></li>
+            <li class="list-group-item list-group-item-secondary"><a href="#"><button><i class="fas fa-chart-bar"></i>View Course Stream</button></a></li>
+            <li class="list-group-item list-group-item-secondary"><a href="#"><button><i class="fas fa-bullhorn"></i>>New Announcement</button</a></li>
+            <li class="list-group-item list-group-item-secondary"><a href="#"><button><i class="fas fa-chart-bar"></i>New Analytics</button></New></a></li>
+            <li class="list-group-item list-group-item-secondary"><a href="#"><button><i class="far fa-bell"></i>View Course Notifications</button></a></li>
             </ul>
             <h2>Coming Up</h2>
             <a href="#"><i class="fas fa-calendar-alt"></i>View Calendar</a>
