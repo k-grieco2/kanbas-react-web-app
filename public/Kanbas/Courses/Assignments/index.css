@@ -30,10 +30,3 @@
 .wd-modules > li {
   margin-bottom: 20px;
 }
-
-.wd-percentage-button {
-  background-color: #FFFFFF;
-  border: 1px solid rgb(209,213,219);
-  border-radius: .5rem;
-  text-align: center;
-}
