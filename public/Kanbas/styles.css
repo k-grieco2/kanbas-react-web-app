@@ -5,4 +5,8 @@ body {
   body * {
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+
+  .list-group-item.override-bs {
+    border-left: 1px;
+    border-left-color: green;
+  }
