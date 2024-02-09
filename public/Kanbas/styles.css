@@ -6,7 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  .list-group-item.override-bs {
-    border-left: 1px;
+  .wd-left-green-stripe {
+    border-left: 5px;
     border-left-color: green;
   }
