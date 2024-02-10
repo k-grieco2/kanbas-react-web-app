@@ -30,6 +30,16 @@
               <li><a href="#"><i class="far fa-question-circle" style="color: red;"></i><br>Help</a></li>
             </ul>
           </td>
+          <div valign="top">
+            <i class="fas fa-bars" style="color: red;"></i> &nbsp; &nbsp;
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/Kanbas/Courses/Home/">CS5610.11744.202310</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Grades</li>
+              </ol>
+            </nav>
+          </div>
+          <hr>
           <td valign="top">
             <ul class="wd-navigation">
               <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
@@ -58,20 +68,10 @@
             <table width="100%">
               <tbody>
                 <tr>
-                  <td>
-                    <select>
-                      <option>Gradebook</option>
-                      <option>Change Gradebook view</option>
-                      <option>Traditional Gradebook</option>
-                      <option>Individual Gradebook</option>
-                    </select>
-                    <button>Import</button>
-                    <select>
-                      <option>Export</option>
-                      <option>Export Current Gradebook View</option>
-                      <option>Export Entire Gradebook</option>
-                    </select>
-                    <button>Configure</button>
+                  <td class="float-end">
+                    <button class="btn btn-light"><i class="far fa-file-import"></i>Import</button>
+                    <button class="btn btn-light"><i class="far fa-file-export"></i>Export</button>
+                    <button class="btn btn-light"><i class="fas fa-cog"></i></button>
                   </td>
                 </tr>
                 <tr>
@@ -81,13 +81,13 @@
                     <h4>Assignment Names</h4>
                     <input type="text" placeholder="Search Assignments"><br>
                     <br>
-                    <button>Apply Filters</button>
+                    <button class="btn btn-light"><i class="far fa-filter"></i>Apply Filters</button>
                     <br>
                   </td>
                 </tr>
               </tbody>
             </table>
-            <table border="1">
+            <table class="table table-striped">
               <thead>
                 <tr>
                   <th>Student Name</th>

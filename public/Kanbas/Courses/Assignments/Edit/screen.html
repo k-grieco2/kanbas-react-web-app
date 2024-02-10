@@ -64,20 +64,21 @@
             <hr>
             <form>
               Assignment Name
-              <input type="text" placeholder="Assignment Name" class="form-control"><br><br>
+              <input type="text" placeholder="Assignment Name" class="form-control"><br>
               <textarea class="form-control">This is the assignment description.</textarea><br>
               <table width="100%">
                 <tbody>
                   <tr>
-                    <td class="float-end">
+                    <td valign="top">
                       Points
                     </td>
                     <td>
                       <input type="text" value="100" class="form-control"><br>
                     </td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td>
+                    <td valign="top">
                       Assignment Group
                     </td>
                     <td>
@@ -88,9 +89,10 @@
                         <option>PROJECTS</option>
                       </select>
                     </td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td>
+                    <td valign="top">
                       Display Grade as
                     </td>
                     <td>
@@ -99,6 +101,7 @@
                         <option>Out of Points</option>
                       </select>
                     </td>
+                    <td></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -106,9 +109,10 @@
                       <input type="checkbox" id="final-grade">
                       <label for="final-grade">Do not count this assignment towards the final grade</label>
                     </td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <td>
+                    <td valign="top">
                       Assign
                     </td>
                     <td>
@@ -116,12 +120,24 @@
                       <input type="text" value="Everyone"><br>
                       <br>Due<br>
                       <input type="date" class="form-control"><br>
-                      <br>Available from<br>
-                      <input type="date" class="form-control"><br>
-                      <br>Until
-                      <input type="date" class="form-control"><br>
-                      <br>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              Available from<br>
+                              <input type="date" class="form-control">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Until
+                              <input type="date" class="form-control"><br>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -133,12 +149,18 @@
                       <input type="checkbox" id="notify-users">
                       <label for="notify-users">Notify users that this content has changed</label>
                     </td>
+                    <td></td>
                     <td class="float-end">
                       <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button">Cancel</button></a>
                       <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button" style="background-color: red; color: white;">Save</button></a>
                     </td>
                   </tr>
                 </tbody>
+                <tfoot style="background-color: grey;">
+                  <td>
+                    <i class="fa fa-plus ms-2"></i> Add
+                  </td>
+                </tfoot>
               </table>
             </form>
           </td>
