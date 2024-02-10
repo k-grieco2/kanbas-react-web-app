@@ -159,7 +159,7 @@
                     <td valign="top">
                       Assign
                     </td>
-                    <td>
+                    <td class="border border-secondary rounded">
                       Assign to <br>
                       <input type="text" value="Everyone"><br>
                       <br>Due<br>
@@ -171,8 +171,6 @@
                               Available from<br>
                               <input type="date" class="form-control">
                             </td>
-                          </tr>
-                          <tr>
                             <td>
                               Until
                               <input type="date" class="form-control"><br>
@@ -180,6 +178,7 @@
                           </tr>
                         </tbody>
                       </table>
+                      <button class="btn btn-secondary" width="100%"><i class="fa fa-plus ms-2"></i> Add</button>
                     </td>
                     <td></td>
                   </tr>
@@ -203,7 +202,7 @@
                 <tfoot style="background-color: lightgray;">
                   <td></td>
                   <td>
-                    <i class="fa fa-plus ms-2"></i> Add
+                    
                   </td>
                   <td></td>
                 </tfoot>
@@ -213,202 +212,5 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="/Kanbas/styles.css" />
-    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="stylesheet" href="/Kanbas/styles.css" />
-    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
-    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
-  </head>
-  <body>
-    <table width="100%">
-      <tbody>
-        <tr>
-          <td valign="top">
-            <ul class="wd-kanbas-navigation">
-              <li><a href="http://northeastern.edu">N</a></li>
-              <li><a href="/Kanbas/Account/Profile/screen.html">
-                <i class="fas fa-user-circle" style="color: white;"></i><br>Account</a></li>
-              <li>
-                <a href="/Kanbas/Dashboard/screen.html">
-                  <i class="fas fa-tachometer-alt" style="color: red;"></i><br>Dashboard</a>
-              </li>
-              <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">
-                <i class="fa fa-book" style="color: red;"></i><br>Courses</a> </li>
-              <li><a href="#"><i class="fa fa-calendar" style="color: red;"></i><br>Calendar</a></li>
-              <li><a href="#"><i class="fa fa-inbox" style="color: red;"></i><br>Inbox</a></li>
-              <li><a href="#"><i class="fa fa-clock" style="color: red;"></i><br>History</a></li>
-              <li><a href="#"><i class="fas fa-network-wired" style="color: red;"></i><br>Studio</a></li>
-              <li><a href="#"><i class="fas fa-sign-out-alt" style="color: red;"></i><br>Commons</a></li>
-              <li><a href="#"><i class="far fa-question-circle" style="color: red;"></i><br>Help</a></li>
-            </ul>
-          </td>
-          <td valign="top">
-            <ul class="wd-navigation">
-              <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-              <li><a href="#">Modules</a></li>
-              <li><a href="#">Piazza</a></li>
-              <li><a href="#">Zoom Meetings</a></li>
-              <li class="wd-active"><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-              <li><a href="#">Quizzes</a></li>
-              <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-              <li><a href="#">People</a></li>
-              <li><a href="#">Panopto Video</a></li>
-              <li><a href="#">Discussions</a></li>
-              <li><a href="#">Announcements</a>
-              </li>
-              <li><a href="#">Pages</a></li>
-              <li><a href="#">Files</a></li>
-              <li><a href="#">Rubrics</a></li>
-              <li><a href="#">Outcomes</a></li>
-              <li><a href="#">Collaborations</a>
-              </li>
-              <li><a href="#">Syllabus</a></li>
-              <li><a href="/Kanbas/Courses/Settings/Course Details/screen.html">Settings</a></li>
-            </ul>
-          </td>
-          <td valign="top">
-            <div class="float-end">
-              <i class="fas fa-check-circle"></i> &nbsp; Published
-              <button class="btn"><i class="fas fa-ellipsis-v"></i></button>
-            </div>
-            <br>
-            <hr>
-            <form>
-              Assignment Name
-              <input type="text" placeholder="Assignment Name" class="form-control"><br>
-              <textarea class="form-control">This is the assignment description.</textarea><br>
-              <table width="100%">
-                <tbody>
-                  <tr>
-                    <td valign="top">
-                      Points
-                    </td>
-                    <td>
-                      <input type="text" value="100" class="form-control"><br>
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td valign="top">
-                      Assignment Group
-                    </td>
-                    <td>
-                      <select class="form-control">
-                        <option>ASSIGNMENTS</option>
-                        <option>QUIZZES</option>
-                        <option>EXAMS</option>
-                        <option>PROJECTS</option>
-                      </select>
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td valign="top">
-                      Display Grade as
-                    </td>
-                    <td>
-                      <select class="form-control">
-                        <option>Percentage</option>
-                        <option>Out of Points</option>
-                      </select>
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>
-                      <input type="checkbox" id="final-grade">
-                      <label for="final-grade">Do not count this assignment towards the final grade</label>
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td valign="top">
-                      Assign
-                    </td>
-                    <td>
-                      Assign to <br>
-                      <input type="text" value="Everyone"><br>
-                      <br>Due<br>
-                      <input type="date" class="form-control"><br>
-                      <table>
-                        <tbody>
-                          <tr>
-                            <td>
-                              Available from<br>
-                              <input type="date" class="form-control">
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              Until
-                              <input type="date" class="form-control"><br>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <hr>
-              <table>
-                <tbody>
-                  <tr>
-                    <td class="float-left">
-                      <input type="checkbox" id="notify-users">
-                      <label for="notify-users">Notify users that this content has changed</label>
-                    </td>
-                    <td></td>
-                    <td class="float-end">
-                      <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button" class="btn btn-light">Cancel</button></a>
-                      <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button" class="btn btn-danger">Save</button></a>
-                    </td>
-                  </tr>
-                </tbody>
-                <tfoot style="background-color: lightgray;">
-                  <td></td>
-                  <td>
-                    <i class="fa fa-plus ms-2"></i> Add
-                  </td>
-                  <td></td>
-                </tfoot>
-              </table>
-            </form>
-          </td>
-        </tr>
-      </tbody>
-    </table>
   </body>
 </html>
