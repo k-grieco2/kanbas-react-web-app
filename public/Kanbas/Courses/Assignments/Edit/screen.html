@@ -60,6 +60,7 @@
               <i class="fas fa-check-circle"></i> &nbsp; Published
               <button class="btn"><i class="fas fa-ellipsis-v"></i></button>
             </div>
+            <br>
             <hr>
             <form>
               Assignment Name
@@ -75,52 +76,70 @@
                       <input type="text" value="100" class="form-control"><br>
                     </td>
                   </tr>
+                  <tr>
+                    <td>
+                      Assignment Group
+                    </td>
+                    <td>
+                      <select class="form-control">
+                        <option>ASSIGNMENTS</option>
+                        <option>QUIZZES</option>
+                        <option>EXAMS</option>
+                        <option>PROJECTS</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Display Grade as
+                    </td>
+                    <td>
+                      <select class="form-control">
+                        <option>Percentage</option>
+                        <option>Out of Points</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <input type="checkbox" id="final-grade">
+                      <label for="final-grade">Do not count this assignment towards the final grade</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Assign
+                    </td>
+                    <td>
+                      Assign to <br>
+                      <input type="text" value="Everyone"><br>
+                      <br>Due<br>
+                      <input type="date" class="form-control"><br>
+                      <br>Available from<br>
+                      <input type="date" class="form-control"><br>
+                      <br>Until
+                      <input type="date" class="form-control"><br>
+                      <br>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
-              
-              <br>Assignment Group<br>
-              <select>
-                <option>ASSIGNMENTS</option>
-                <option>QUIZZES</option>
-                <option>EXAMS</option>
-                <option>PROJECTS</option>
-              </select><br>
-              <br>Display Grade as<br>
-              <select>
-                <option>Percentage</option>
-                <option>Out of Points</option>
-              </select><br>
-              <br>Submission Type<br>
-              <select>
-                <option>Online</option>
-              </select><br>
-              <input type="checkbox" id="group">
-              <label for="group">Group Assignments</label><br>
-              <input type="checkbox" id="review">
-              <label for="review">Peer Review</label><br>
-              <br>Online Entry Options<br>
-                <input type="checkbox" id="textentry">
-                <label for="textentry">Text Entry</label><br>
-                <input type="checkbox" id="webURL">
-                <label for="webURL">Website URL</label><br>
-                <input type="checkbox" id="mediaRecordings">
-                <label for="mediaRecordings">Media Recordings</label><br>
-                <input type="checkbox" id="studentAnt">
-                <label for="studentAnt">Student Annotation</label><br>
-                <input type="checkbox" id="uploads">
-                <label for="uploads">File Uploads</label><br>
-              <br>Assign<br>
-              Assign to<br>
-              <input type="text" value="Everyone"><br>
-              <br>Due<br>
-              <input type="date"><br>
-              <br>Available from<br>
-              <input type="date"><br>
-              <br>Until<br>
-              <input type="date"><br>
-              <br>
-              <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button">Cancel</button></a>
-              <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button">Save</button></a>
+              <hr>
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="float-left">
+                      <input type="checkbox" id="notify-users">
+                      <label for="notify-users">Notify users that this content has changed</label>
+                    </td>
+                    <td class="float-end">
+                      <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button">Cancel</button></a>
+                      <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button" style="background-color: red; color: white;">Save</button></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </form>
           </td>
         </tr>
