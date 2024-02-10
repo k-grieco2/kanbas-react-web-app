@@ -11,6 +11,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
+    <div class="d-block d-md-none fixed-top" style="background-color: black; color: white; text-align: center;">
+      <table width="100%">
+        <tr>
+          <td><i class="fas fa-bars float-left"></i></td>
+          <td>
+            CS4550.12631.202410 <br> Modules
+          </td>
+          <td><i class="fas fa-chevron-down float-right"></i></td>
+        </tr>
+      </table>
+    </div>
     <div class="d-flex">
       <div class="d-none d-md-block">
         <ul class="wd-kanbas-navigation">
@@ -57,252 +68,183 @@
       </div>
       <div class="flex-fill">
         <div class="float-right">
-            <input type="text" placeholder="Search for Assignments" class="form-control w-25">
-            <button class="float-end"><i class="fas fa-ellipsis-v"></i></button>
-            <button class="float-end" style="color: white; background-color: red;"><i class="fa fa-plus ms-2"></i>Assignment</button>
-            <button class="float-end"><i class="fa fa-plus ms-2"></i>Group</button>
-        </div><br>
-        <hr>
-        <ul class="list-group wd-modules">
-          <li>
-            <div>
-              <i class="fa fa-ellipsis-v"></i> Assignments
-              <span class="float-end">
-                40% of Total
-                <i class="fa fa-plus ms-2"></i>
-                <i class="fa fa-ellipsis-v ms-2"></i>
-                            <!--<select class="float-end">
-                            <option><button><i class="fas fa-ellipsis-v"></i></option>
-                            <option>Edit</option>
-                            <option>Speed Grader</option>
-                            <option>Duplicate</option>
-                            <option>Delete</option>
-                            <option>Move To...</option>
-                            <option>Send To...</option>
-                            <option>Copy To...</option>
-                            <option>Share to Commons</option>
-                            </select>-->
-               </span>
-            </div>
-            <ul class="list-group">
-              <li class="list-group-item">
-                <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
-                            A1 - SETUP</a><br>
-                            <a href="#">Multiple Modules</a>
-                            | Not available yet
-                            <span class="float-end">
-                              <i class="fa fa-check-circle text-success"></i>
-                              <i class="fa fa-ellipsis-v ms-2"></i>
-                            </span>
-                          </li>
-                          <li class="list-group-item">
-                            <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
-                            A2 - HTML</a><br>
-                            <a href="#">Multiple Modules</a>
-                            | Not available yet
-                            <span class="float-end">
-                              <i class="fa fa-check-circle text-success"></i>
-                              <i class="fa fa-ellipsis-v ms-2"></i>
-                            </span>
-                          </li>
-                          <li class="list-group-item">
-                            <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
-                            A3 - JS + React</a><br>
-                            <a href="#">Multiple Modules</a>
-                            | Not available yet
-                            <span class="float-end">
-                              <i class="fa fa-check-circle text-success"></i>
-                              <i class="fa fa-ellipsis-v ms-2"></i>
-                            </span>
-                          </li>
-                          <li class="list-group-item">
-                            <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
-                            A4 - STATE + REDUX</a><br>
-                            <a href="#">Multiple Modules</a>
-                            | Not available yet
-                            <span class="float-end">
-                              <i class="fa fa-check-circle text-success"></i>
-                              <i class="fa fa-ellipsis-v ms-2"></i>
-                            </span>
-                          </li>
-                          <li class="list-group-item">
-                            <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
-                            A5 - NODE + SESSION</a><br>
-                            <a href="#">Multiple Modules</a>
-                            | Not available yet
-                            <span class="float-end">
-                              <i class="fa fa-check-circle text-success"></i>
-                              <i class="fa fa-ellipsis-v ms-2"></i>
-                            </span>
-                          </li>
-                          <li class="list-group-item">
-                            <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-clipboard-list"></i>
-                            A6 - MONGO + MONGOOSE</a><br>
-                            <a href="#">Multiple Modules</a>
-                            | Not available yet
-                            <span class="float-end">
-                              <i class="fa fa-check-circle text-success"></i>
-                              <i class="fa fa-ellipsis-v ms-2"></i>
-                            </span>
-                          </li>
+            <button>Collapse All</button>
+            <button>View Progress</button>
+            <select>
+                <option><i class="fa fa-check-circle " style="color: green;"></i>Publish All</option>
+                <option>Unpublish All</option>
+                <option>Unpublish All</option>
+            </select>
+            <button style="background-color: red; color: white;">+ Module</button>
+            <button><i class="fa fa-ellipsis-v ms-2"></i></button>
+          </div><br>
+          <hr>
+          <ul class="list-group wd-modules">
+            <li class="list-group-item">
+              <div>
+                <i class="fa fa-ellipsis-v"></i> Week 1
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-plus ms-2"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i> Learning Objectives
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Introduction to the course
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Learn what is Web Development
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Creating a development environment
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Creating a Web Application
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Getting started with the 1st assignment
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i> Reading
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Full Stack Developer - Chapter 1 - Introduction
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i> Slides
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i><a href="#" style="color: red;"><i class="fas fa-link text-decoration-none"></i>     Introduction to Web Development <i class="fas fa-external-link-alt"></i></a>
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i><a href="#" style="color: red;"><i class="fas fa-link text-decoration-none"></i>     Creating an HTTP server with Node.js <i class="fas fa-external-link-alt"></i></a>  
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i><a href="#" style="color: red;"><i class="fas fa-link text-decoration-none"></i>     Creating a React Application <i class="fas fa-external-link-alt"></i></a>
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div>
+                <i class="fa fa-ellipsis-v"></i> Week 2
+                <span class="float-end">
+                  <i class="fa fa-check-circle text-success"></i>
+                  <i class="fa fa-plus ms-2"></i>
+                  <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </div>
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i> Learning Objectives
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Learn how to create user interfaces with HTML
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Keep working on assignment 1
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Deploy the assignment to Netlify
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i> Reading
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Full Stack Developer - Chapter 1 - Introduction
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+                <li class="list-group-item">
+                  <i class="fa fa-ellipsis-v"></i>     Full Stack Developer - Chapter 2 - Creating user Interfaces With HTML
+                  <span class="float-end">
+                    <i class="fa fa-check-circle text-success"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                  </span>
+                </li>
+              </ul>
+            </li>
           </ul>
-        </li>
-                      <li class="list-group-item">
-                          <div>
-                            <i class="fa fa-ellipsis-v"></i> Quizzes
-                            <span class="float-end">
-                              <span class="nav md-pills nav-justified pills-rounded pills-outline-grey">
-                                10% of Total
-                              </span>
-                              <i class="fa fa-plus ms-2"></i>
-                              <i class="fa fa-ellipsis-v ms-2"></i>
-                              <!--<select class="float-end">
-                              <option><button><i class="fas fa-ellipsis-v"></i></option>
-                              <option>Edit</option>
-                              <option>Speed Grader</option>
-                              <option>Duplicate</option>
-                              <option>Delete</option>
-                              <option>Move To...</option>
-                              <option>Send To...</option>
-                              <option>Copy To...</option>
-                              <option>Share to Commons</option>
-                              </select>-->
-                            </span>
-                          </div>
-                          <ul class="list-group">
-                            <li class="list-group-item">
-                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pencil-alt"></i>
-                              <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q1 - HTML</a><br>
-                              <a href="#">Multiple Modules</a>
-                              | Not available yet
-                              <span class="float-end">
-                                <i class="fa fa-check-circle text-success"></i>
-                                <i class="fa fa-ellipsis-v ms-2"></i>
-                              </span>
-                            </li>
-                            <li class="list-group-item">
-                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pencil-alt"></i>
-                              <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q2 - CSS</a><br>
-                              <a href="#">Multiple Modules</a>
-                              | Not available yet
-                              <span class="float-end">
-                                <i class="fa fa-check-circle text-success"></i>
-                                <i class="fa fa-ellipsis-v ms-2"></i>
-                              </span>
-                            </li>
-                            <li class="list-group-item">
-                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pencil-alt"></i>
-                              <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q3 - JS, ES6</a><br>
-                              <a href="#">Multiple Modules</a>
-                              | Not available yet
-                              <span class="float-end">
-                                <i class="fa fa-check-circle text-success"></i>
-                                <i class="fa fa-ellipsis-v ms-2"></i>
-                              </span>
-                            </li>
-                            <li class="list-group-item">
-                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pencil-alt"></i>
-                              <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q4 - NODE</a><br>
-                              <a href="#">Multiple Modules</a>
-                              | Not available yet
-                              <span class="float-end">
-                                <i class="fa fa-check-circle text-success"></i>
-                                <i class="fa fa-ellipsis-v ms-2"></i>
-                              </span>
-                            </li>
-                            <li class="list-group-item">
-                              <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pencil-alt"></i>
-                              <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Q5 - MONGO</a><br>
-                              <a href="#">Multiple Modules</a>
-                              | Not available yet
-                              <span class="float-end">
-                                <i class="fa fa-check-circle text-success"></i>
-                                <i class="fa fa-ellipsis-v ms-2"></i>
-                              </span>
-                            </li>
-                          </ul>
-                         </li>
-                        <li class="list-group-item">
-                            <div>
-                              <i class="fa fa-ellipsis-v"></i> Exams
-                              <span class="float-end">
-                                <span class="nav md-pills nav-justified pills-rounded pills-outline-grey">
-                                  20% of Total
-                                </span>
-                                <i class="fa fa-plus ms-2"></i>
-                                <i class="fa fa-ellipsis-v ms-2"></i>
-                                <!--<select class="float-end">
-                                <option><button><i class="fas fa-ellipsis-v"></i></option>
-                                <option>Edit</option>
-                                <option>Speed Grader</option>
-                                <option>Duplicate</option>
-                                <option>Delete</option>
-                                <option>Move To...</option>
-                                <option>Send To...</option>
-                                <option>Copy To...</option>
-                                <option>Share to Commons</option>
-                                </select>-->
-                              </span>
-                            </div>
-                            <ul class="list-group">
-                              <li class="list-group-item">
-                                <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pen-square"></i>
-                                <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Midterm</a><br>
-                                <a href="#">Multiple Modules</a>
-                                | Not available yet
-                                <span class="float-end">
-                                  <i class="fa fa-check-circle text-success"></i>
-                                  <i class="fa fa-ellipsis-v ms-2"></i>
-                                </span>
-                              </li>
-                              <li class="list-group-item">
-                                <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-pen-square"></i>
-                                <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Final</a><br>
-                                <a href="#">Multiple Modules</a>
-                                | Not available yet
-                                <span class="float-end">
-                                  <i class="fa fa-check-circle text-success"></i>
-                                  <i class="fa fa-ellipsis-v ms-2"></i>
-                              </span>
-                              </li>
-                          </ul>
-                        </li>
-                        <li class="list-group-item">
-                          <div>
-                            <i class="fa fa-ellipsis-v"></i> Project
-                            <span class="float-end">
-                              <span class="nav md-pills nav-justified pills-rounded pills-outline-grey">
-                                30% of Total
-                              </span>
-                              <i class="fa fa-plus ms-2"></i>
-                              <i class="fa fa-ellipsis-v ms-2"></i>
-                              <!--<select class="float-end">
-                              <option><button><i class="fas fa-ellipsis-v"></i></option>
-                              <option>Edit</option>
-                              <option>Speed Grader</option>
-                              <option>Duplicate</option>
-                              <option>Delete</option>
-                              <option>Move To...</option>
-                              <option>Send To...</option>
-                              <option>Copy To...</option>
-                              <option>Share to Commons</option>
-                              </select>-->
-                            </span>
-                          </div>
-                          <ul class="list-group">
-                          <li class="list-group-item">
-                            <i class="fa fa-ellipsis-v"></i> &nbsp;<i class="fas fa-project-diagram"></i>
-                            <a href="/Kanbas/Courses/Assignments/Edit/screen.html">Project</a><br>
-                            <a href="#">Multiple Modules</a>
-                            | Not available yet
-                            <span class="float-end">
-                              <i class="fa fa-check-circle text-success"></i>
-                              <i class="fa fa-ellipsis-v ms-2"></i>
-                            </span>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
         </div>
       </div>
   </body>
