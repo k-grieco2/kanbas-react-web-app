@@ -4,7 +4,7 @@ import { FaTachometerAlt, FaRegUserCircle, FaBook, FaRegCalendarAlt, FaInbox, Fa
 function KanbasNavigation() {
   const links = [
     { label: "N", icon: null },
-    { label: "Account",   icon: <FaRegUserCircle />  },
+    { label: "Account",   icon: <span className="ts-5" style={{color: "lightgrey"}}><FaRegUserCircle /></span> },
     { label: "Dashboard", icon: <span><FaTachometerAlt /></span>  },
     { label: "Courses",   icon: <span><FaBook /> </span>          },
     { label: "Calendar",  icon: <span><FaRegCalendarAlt /> </span> },

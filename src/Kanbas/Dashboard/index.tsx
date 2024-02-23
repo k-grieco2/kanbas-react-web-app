@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { courses } from "../Database";
+import { FaAddressBook, FaBook, FaClipboard, FaClipboardCheck, FaEdit, FaFile, FaFileAlt, FaFileCode, FaFileImage, FaFileInvoice, FaFileInvoiceDollar, FaFileWord, FaList, FaNotesMedical, FaPagelines, FaRedditSquare, FaRegEdit } from "react-icons/fa";
 function Dashboard() {
   return (
     <div className="p-4">
       <h1>Dashboard</h1>              <hr />
-      <h2>Published Courses (12)</h2> <hr />
+      <h2>Published Courses (3)</h2> <hr />
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
           {courses.map((course) => (
@@ -18,8 +19,8 @@ function Dashboard() {
                     style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
                     {course.name} </Link>
                   <p className="card-text">{course.name}</p>
-                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn btn-primary">
-                    Go </Link>
+                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn" style={{color: "gray"}}>
+                  <FaFileInvoice/>  </Link>
                 </div>
               </div>
             </div>
