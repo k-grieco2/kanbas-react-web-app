@@ -18,6 +18,11 @@
     color: white;
     text-decoration: none;
   }
+  .wd-kanbas-navigation a span {
+    color: red;
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
   .wd-kanbas-navigation a i {
     color: red;
     font-size: 2em;
