@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
 import { modules } from "../../Database";
-import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaPlus } from "react-icons/fa";
+import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaPlus, FaArrowDown, FaSortDown, FaGlasses } from "react-icons/fa";
 import { useParams } from "react-router";
 function ModuleList() {
   const { courseId } = useParams();
@@ -9,17 +9,21 @@ function ModuleList() {
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
     <>
+    
       <div className="flex-container">
-          <div className="flex-row float-end">
-          <div className="float-end">
-            <button className="btn btn-outline-dark">Collapse All</button>
-            <button className="btn btn-outline-dark">View Progress</button>
-            <button className="btn btn-outline-dark"><FaCheckCircle/> Publish All</button>
-            <button className="btn btn-danger"><FaPlus/> Modules</button>
-            <button className="btn btn-light"><FaEllipsisV/></button>
+      <div className="d-flex flex-column">
+          <span>
+            <button className="btn btn-outline-dark float-end"><FaGlasses/> Student View</button><br /><br />
+
+            <button className="btn btn-light float-end"><FaEllipsisV/></button>
+            <button className="btn btn-danger float-end"><FaPlus/> Modules</button>
+            <button className="btn btn-outline-dark float-end"><FaCheckCircle/> Publish All <FaSortDown/></button>
+            <button className="btn btn-outline-dark float-end">View Progress</button>
+            <button className="btn btn-outline-dark float-end">Collapse All</button><br /><br />
+            <hr/>
+          </span>
           </div>
-          </div>
-          <div className="flex-row">
+          <div className="d-flex flex-column">
           <div>
           <ul className="list-group wd-modules">
             {modulesList.map((module, index) => (
