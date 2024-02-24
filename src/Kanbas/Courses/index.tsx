@@ -23,7 +23,6 @@ function Courses() {
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home/>} />
             <Route path="Modules" element={<Modules/>} />
-            <Route path="Piazza" element={<h1>Piazza</h1>} />
             <Route path="Assignments" element={<Assignments/>} />
             <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>} />
             <Route path="Grades" element={<Grades/>} />

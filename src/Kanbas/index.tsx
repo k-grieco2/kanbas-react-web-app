@@ -6,7 +6,6 @@ import "./styles.css";
 function Kanbas() {
   return (
     <>
-    <body>
     <div className="d-flex">
       <KanbasNavigation />
       <div style={{ flexGrow: 1 }}>
@@ -20,7 +19,6 @@ function Kanbas() {
         </Routes>
       </div>
     </div>
-    </body>
     </>
 );}
 export default Kanbas;
