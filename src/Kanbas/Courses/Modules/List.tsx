@@ -13,11 +13,11 @@ function ModuleList() {
       <div className="flex-container">
           <div className="d-flex flex-column">
           <span style={{width: "100%"}}>
-            <button className="btn btn-light float-end"><FaEllipsisV/></button>
-            <button className="btn btn-danger float-end"><FaPlus/> Modules</button>
-            <button className="btn btn-outline-dark float-end"><span style={{color: "green"}}><FaCheckCircle/></span> Publish All <FaCaretDown/></button>
-            <button className="btn btn-outline-dark float-end">View Progress</button>
-            <button className="btn btn-outline-dark float-end">Collapse All</button><br /><br />
+            <button className="btn btn-light btn-sm float-end"><FaEllipsisV/></button>
+            <button className="btn btn-danger btn-sm float-end"><FaPlus/> Modules</button>
+            <button className="btn btn-outline-dark btn-sm float-end"><span style={{color: "green"}}><FaCheckCircle/></span> Publish All <FaCaretDown/></button>
+            <button className="btn btn-outline-dark btn-sm float-end">View Progress</button>
+            <button className="btn btn-outline-dark btn-sm float-end">Collapse All</button><br /><br />
           </span>
           <hr/>
           <div>
