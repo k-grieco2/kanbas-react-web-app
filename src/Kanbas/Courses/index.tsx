@@ -37,7 +37,7 @@ function Courses() {
       if (index === 0 && course) {
         return {
           content: course.name,
-          href: `/${pathSegments.slice(0, index + 4,).join('/')}`,
+          href: `#/${pathSegments.slice(0, index + 3,).join('/')}`,
         };
       } else if (index === pathSegments.length - 3) {
         return {
@@ -47,12 +47,12 @@ function Courses() {
       } else if (index === 1) { // Add this condition for the course link
         return {
           content: segment,
-          href: `/Kanvas/Courses/${courseId}`, // Construct the href for the course link
+          href: `#/${pathSegments.slice(0, index + 3).join('/')}`, // Construct the href for the course link
         };
       } else {
         return {
           content: segment,
-          href: `/${pathSegments.slice(0, index + 4).join('/')}`,
+          href: `#/${pathSegments.slice(0, index + 3).join('/')}`,
         };
       }
     });

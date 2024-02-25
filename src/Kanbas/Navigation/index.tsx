@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "./index.css";
 import { FaTachometerAlt, FaRegUserCircle, FaBook, FaRegCalendarAlt, FaInbox, FaClock, FaNetworkWired, FaSignOutAlt, FaQuestionCircle, FaBars, FaGlasses, FaChevronDown } from "react-icons/fa";
-import { courses } from "../Database";
+import React from "react";
 
 function KanbasNavigation() {
   const location = useLocation();
