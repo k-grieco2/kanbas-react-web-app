@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
     <div className="container-fluid row">
-        <div className="col-md-8">
+        <div className="col-md">
           <div className="flex-fill flex-row">
             <h2>Home</h2>
           </div>
@@ -14,7 +14,7 @@ function Home() {
             <ModuleList />
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-3 d-none d-lg-block">
         <h2>Course Status</h2>
         <CourseStatus/>
         </div>

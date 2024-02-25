@@ -1,9 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import "./index.css";
 import { FaTachometerAlt, FaRegUserCircle, FaBook, FaRegCalendarAlt, FaInbox, FaClock, FaNetworkWired, FaSignOutAlt, FaQuestionCircle } from "react-icons/fa";
+
 function KanbasNavigation() {
   const links = [
-    { label: "N", icon: null },
+    { label: " ", icon: <img width={"100%"} src={require('../../images/northeasternbannerN.png')}/> },
     { label: "Account",   icon: <span className="ts-5" style={{color: "lightgrey"}}><FaRegUserCircle /></span> },
     { label: "Dashboard", icon: <span><FaTachometerAlt /></span>  },
     { label: "Courses",   icon: <span><FaBook /> </span>          },

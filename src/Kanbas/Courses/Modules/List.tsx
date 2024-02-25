@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
 import { modules } from "../../Database";
-import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaPlus, FaArrowDown, FaSortDown, FaGlasses } from "react-icons/fa";
+import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaPlus, FaArrowDown, FaSortDown, FaGlasses, FaCaretRight, FaCaretDown } from "react-icons/fa";
 import { useParams } from "react-router";
 function ModuleList() {
   const { courseId } = useParams();
@@ -11,19 +11,15 @@ function ModuleList() {
     <>
     
       <div className="flex-container">
-      <div className="d-flex flex-column">
-          <span>
-            <button className="btn btn-outline-dark float-end"><FaGlasses/> Student View</button><br /><br />
-
+          <div className="d-flex flex-column">
+          <span style={{width: "100%"}}>
             <button className="btn btn-light float-end"><FaEllipsisV/></button>
             <button className="btn btn-danger float-end"><FaPlus/> Modules</button>
-            <button className="btn btn-outline-dark float-end"><FaCheckCircle/> Publish All <FaSortDown/></button>
+            <button className="btn btn-outline-dark float-end"><span style={{color: "green"}}><FaCheckCircle/></span> Publish All <FaCaretDown/></button>
             <button className="btn btn-outline-dark float-end">View Progress</button>
             <button className="btn btn-outline-dark float-end">Collapse All</button><br /><br />
-            <hr/>
           </span>
-          </div>
-          <div className="d-flex flex-column">
+          <hr/>
           <div>
           <ul className="list-group wd-modules">
             {modulesList.map((module, index) => (
@@ -31,10 +27,10 @@ function ModuleList() {
                 className="list-group-item"
                 onClick={() => setSelectedModule(module)}>
                 <div>
-                  <FaEllipsisV/>
+                  <FaEllipsisV/> <FaCaretRight/>
                   {module.name}
                   <span className="float-end">
-                    <FaCheckCircle />
+                    <span style={{color: "green"}}><FaCheckCircle /></span>
                     <FaPlusCircle />
                     <FaEllipsisV />
                   </span>
