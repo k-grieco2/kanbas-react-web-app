@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
+import { FaBook, FaCheckCircle, FaEllipsisV, FaPlus, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
 function Assignments() {
@@ -8,24 +8,46 @@ function Assignments() {
     (assignment) => assignment.course === courseId);
   return (
     <>
-      {/* Add buttons here */}
+      <span>
+        <input type="text" placeholder="Search for Assignment" style={{width: "40%"}} />
+        <span className="float-end">
+          <button className="btn btn-light"><FaPlus/> Group</button>
+          <button className="btn btn-danger"><FaPlus/> Assignment</button>
+          <button className="btn btn-light"><FaEllipsisV/></button>
+        </span>
+      </span><br />
+      <hr />
       <ul className="list-group wd-modules">
         <li className="list-group-item">
           <div>
             <FaEllipsisV /> ASSIGNMENTS
             <span className="float-end">
-              <FaCheckCircle />
-              <FaPlusCircle /><FaEllipsisV />
+            <span className="border border-secondary rounded">
+                      40% of Total
+            </span> &nbsp;
+              <span style={{color: "green"}}><FaCheckCircle /></span> &nbsp;
+              <FaPlusCircle /> <FaEllipsisV />
             </span>
           </div>
           <ul className="list-group">
             {assignmentList.map((assignment) => (
               <li className="list-group-item">
-                <FaEllipsisV />
-                <Link
-                   to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title}</Link>
-                <span className="float-end">
-                  <FaCheckCircle /><FaEllipsisV /></span>
+                <table className="row">
+                  <div className="col-md-1">
+                  <FaEllipsisV /><FaBook/>
+                  </div>
+                  <div className="col" style={{width: "80%"}}>
+                  <Link
+                   to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>{assignment.title} <br />
+                   Multiple Modules | Not available yet
+                   </Link>
+                  </div>
+                  <div className="col" style={{width: "10%"}}>
+                  <span className="float-end">
+                  <span style={{color: "green"}}><FaCheckCircle /></span><FaEllipsisV /></span>
+                  </div>
+                </table>
+                
               </li>))}
           </ul>
         </li>

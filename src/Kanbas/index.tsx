@@ -3,8 +3,10 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import "./styles.css";
+import React from "react";
 function Kanbas() {
   return (
+    <>
     <div className="d-flex">
       <KanbasNavigation />
       <div style={{ flexGrow: 1 }}>
@@ -14,8 +16,10 @@ function Kanbas() {
           <Route path="Account" element={<h1>Account</h1>} />
           <Route path="Dashboard" element={<Dashboard />} />
           <Route path="Courses/:courseId/*" element={<Courses />} />
+          <Route path="Courses" element={<Dashboard/>}/>
         </Routes>
       </div>
     </div>
+    </>
 );}
 export default Kanbas;
