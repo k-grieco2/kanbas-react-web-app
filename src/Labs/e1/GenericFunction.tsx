@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 
 function Abc() {
-    const q = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    return (
-      <ul>
-        {q.map((s) => (
-          <li key={s}>
-            2 x {s} = {2 * s}
-          </li>
-        ))}
-      </ul>
-    );
-  }
-
+  const [q, g] = useState(0);
+  const [x, j] = useState(1);
+  const [k, h] = useState(1);
+  const p = () => {
+    h(k + x);
+    g(x);
+    j(k);
+  };
+  return (
+    <div>
+      W = {q}
+      U = {x}
+      F = {k}
+      <button onClick={p}>M</button>
+    </div>
+  );
+}
 export default Abc;

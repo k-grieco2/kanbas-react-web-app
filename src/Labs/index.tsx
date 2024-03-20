@@ -4,8 +4,11 @@ import Nav from "../Nav";
 import { Routes, Route, Link } from "react-router-dom";
 import React from "react";
 import E1 from "./e1";
+import store from "./store";
+import { Provider } from "react-redux";
 function Labs() {
    return (
+    <Provider store={store}>
      <div className="container-fluid">
        <h1>Labs</h1>
        <Nav />
@@ -18,6 +21,7 @@ function Labs() {
          <Route path="/e1/*" element={<E1/>} />
        </Routes>
      </div>
+     </Provider>
    );
  }
  export default Labs;
