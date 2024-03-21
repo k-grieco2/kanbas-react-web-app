@@ -1,15 +1,27 @@
 import React, { useState } from "react";
 import "./index.css";
-import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaPlus, FaArrowDown, FaSortDown, FaGlasses, FaCaretRight, FaCaretDown } from "react-icons/fa";
 import { useParams } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./reducer";
+import { KanbasState } from "../../store";
+
 function ModuleList() {
   const { courseId } = useParams();
-  const modulesList = modules.filter((module) => module.course === courseId);
-  const [selectedModule, setSelectedModule] = useState(modulesList[0]);
+  const moduleList = useSelector((state: KanbasState) => 
+    state.modulesReducer.modules);
+  const module = useSelector((state: KanbasState) => 
+    state.modulesReducer.module);
+  const dispatch = useDispatch();
+  const [selectedModule, setSelectedModule] = useState(moduleList[0]);
+
   return (
     <>
-    
       <div className="flex-container">
           <div className="d-flex flex-column">
           <span style={{width: "100%"}}>
@@ -22,10 +34,36 @@ function ModuleList() {
           <hr/>
           <div>
           <ul className="list-group wd-modules">
-            {modulesList.map((module, index) => (
-              <li key={index}
+          <li className="list-group-item">
+            <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+              Add
+            </button>
+            <button onClick={() => dispatch(updateModule(module))}>
+              Update
+            </button>
+            <input value={module.name}
+              onChange={(e) => 
+                dispatch(setModule({ ...module, name: e.target.value }))}
+            />
+            <textarea value={module.description}
+              onChange={(e) => 
+                dispatch(setModule({ ...module, description: e.target.value }))}
+            />
+          </li>
+            {moduleList
+            .filter((module) => module.course === courseId)
+            .map((module, index) => (
+              <li key={index} 
                 className="list-group-item"
                 onClick={() => setSelectedModule(module)}>
+                <button
+                  onClick={() => dispatch(setModule(module))}>
+                  Edit
+                </button>
+                <button
+                  onClick={() => dispatch(deleteModule(module._id))}>
+                  Delete
+                </button>
                 <div>
                   <FaEllipsisV/> <FaCaretRight/>
                   {module.name}
@@ -37,7 +75,7 @@ function ModuleList() {
                 </div>
                 {selectedModule._id === module._id && (
                   <ul className="list-group">
-                    {module.lessons?.map((lesson, index) => (
+                    {module.lessons?.map((lesson: any, index: any) => (
                       <li className="list-group-item" key={index}>
                         <FaEllipsisV />
                         {lesson.name}
