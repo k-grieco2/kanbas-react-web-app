@@ -61,9 +61,9 @@ function Assignments() {
                   <div className="col" style={{width: "10%"}}>
                   <span className="float-end">
                   <span style={{color: "green"}}><FaCheckCircle /></span><FaEllipsisV />
-                  <span>
-                    <button className="form-control" onClick={() => check(assignment._id)}>Delete</button>
-                  </span>
+                  <div>
+                    <button className="btn btn-warning rounded" onClick={() => check(assignment._id)}>Delete</button>
+                  </div>
                   </span>
                   </div>
                 </table>

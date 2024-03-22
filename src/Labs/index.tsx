@@ -14,7 +14,7 @@ function Labs() {
        <Nav />
        <Link to="/Labs/a3">Assignment 3</Link> |
        <Link to="/Labs/a4">Assignment 4</Link> |
-       <Link to="/Labs/e1">E1 Sample</Link>
+       <Link to="/Labs/e1">Sample Function</Link>
        <Routes>
          <Route path="/a3/*" element={<Assignment3 />} />
          <Route path="/a4/*" element={<Assignment4 />} />

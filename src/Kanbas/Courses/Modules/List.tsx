@@ -36,7 +36,7 @@ function ModuleList() {
           <ul className="list-group wd-modules">
           <li className="list-group-item">
             <div className="flex-container row">
-              <div className="col-md-10">
+              <div className="col-md-12">
                 <div className="row">
                 <input value={module.name}
                   onChange={(e) => 
@@ -49,21 +49,21 @@ function ModuleList() {
                     dispatch(setModule({ ...module, description: e.target.value }))}
                 />
                 </div>
-                
-                
               </div>
-              <div className="col-md-2">
-              <button className="btn btn-success float-end" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
-                Add
-              </button>
-              <button className="btn btn-light float-end" onClick={() => dispatch(updateModule(module))}>
-                Update
-              </button>
+              <div className="row">
+                <div className="col-md-6 row">
+                  <button className="mt-2 btn btn-success" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                    Add
+                  </button>
+                  </div>
+                <div className="col-md-6 row">
+                  <button className="mt-2 btn btn-light float-end" onClick={() => dispatch(updateModule(module))}>
+                    Update
+                  </button>
+                </div>
               </div>
-            
             </div>
-            
-            
+
           </li>
             {moduleList
             .filter((module) => module.course === courseId)
@@ -71,18 +71,19 @@ function ModuleList() {
               <li key={index} 
                 className="list-group-item"
                 onClick={() => setSelectedModule(module)}>
-                <button
-                  onClick={() => dispatch(setModule(module))}>
-                  Edit
-                </button>
-                <button
-                  onClick={() => dispatch(deleteModule(module._id))}>
-                  Delete
-                </button>
+                
                 <div>
                   <FaEllipsisV/> <FaCaretRight/>
                   {module.name}
                   <span className="float-end">
+                  <button className="btn btn-light rounded"
+                    onClick={() => dispatch(setModule(module))}>
+                    Edit
+                  </button> &nbsp;
+                  <button className="btn btn-danger rounded"
+                    onClick={() => dispatch(deleteModule(module._id))}>
+                    Delete
+                  </button> &nbsp;
                     <span style={{color: "green"}}><FaCheckCircle /></span>
                     <FaPlusCircle />
                     <FaEllipsisV />
