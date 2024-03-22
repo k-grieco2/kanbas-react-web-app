@@ -2,10 +2,7 @@ import React from "react";
 import { FaBook, FaCheckCircle, FaEllipsisV, FaPlus, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import {
-  addAssignment,
   deleteAssignment,
-  updateAssignment,
-  setAssignment,
 } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from "../../store";

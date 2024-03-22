@@ -1,3 +1,4 @@
+import React from "react";
 import { FaBan, FaCheckCircle, FaFileImport, FaCloudUploadAlt, FaBullseye, FaChartBar, FaBullhorn, FaBell, FaCalendarAlt } from "react-icons/fa"
 
 function CourseStatus() {

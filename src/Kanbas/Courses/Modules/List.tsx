@@ -35,20 +35,35 @@ function ModuleList() {
           <div>
           <ul className="list-group wd-modules">
           <li className="list-group-item">
-            <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
-              Add
-            </button>
-            <button onClick={() => dispatch(updateModule(module))}>
-              Update
-            </button>
-            <input value={module.name}
-              onChange={(e) => 
-                dispatch(setModule({ ...module, name: e.target.value }))}
-            />
-            <textarea value={module.description}
-              onChange={(e) => 
-                dispatch(setModule({ ...module, description: e.target.value }))}
-            />
+            <div className="flex-container row">
+              <div className="col-md-10">
+                <div className="row">
+                <input value={module.name}
+                  onChange={(e) => 
+                    dispatch(setModule({ ...module, name: e.target.value }))}
+                />
+                </div>
+                <div className="row mt-2">
+                <textarea value={module.description}
+                  onChange={(e) => 
+                    dispatch(setModule({ ...module, description: e.target.value }))}
+                />
+                </div>
+                
+                
+              </div>
+              <div className="col-md-2">
+              <button className="btn btn-success float-end" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                Add
+              </button>
+              <button className="btn btn-light float-end" onClick={() => dispatch(updateModule(module))}>
+                Update
+              </button>
+              </div>
+            
+            </div>
+            
+            
           </li>
             {moduleList
             .filter((module) => module.course === courseId)

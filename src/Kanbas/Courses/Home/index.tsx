@@ -1,6 +1,7 @@
 import { FaBan, FaBell, FaBullhorn, FaBullseye, FaCalendarAlt, FaChartBar, FaCheckCircle, FaCloudUploadAlt, FaFileImport } from "react-icons/fa";
 import ModuleList from "../Modules/List";
 import CourseStatus from "./CourseStatus";
+import React from "react";
 
 function Home() {
   return (

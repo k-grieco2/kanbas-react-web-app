@@ -21,10 +21,10 @@ function Dashboard(
       onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
       <input value={course.endDate} className="form-control" type="date" 
       onChange={(e) => setCourse({ ...course, endDate: e.target.value }) }/>
-      <button onClick={addNewCourse} >
+      <button className="btn btn-primary mb-4" onClick={addNewCourse} >
         Add
       </button>
-      <button onClick={updateCourse} >
+      <button onClick={updateCourse} className="btn btn-light mb-4">
         Update
       </button>
       <h2>Published Courses (3)</h2> <hr />
@@ -39,22 +39,24 @@ function Dashboard(
                   <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}
                     style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
                     {course.name}
-                    <button onClick={(event) => {
+                    </Link>
+                  <p className="card-text">{course.name}</p>
+                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn" style={{color: "gray"}}>
+                  <FaFileInvoice/>  </Link>
+                  <span className="float-end">
+                  <button className="btn btn-light" onClick={(event) => {
                         event.preventDefault();
                         setCourse(course);
                       }}>
                       Edit
                     </button>
-                    <button onClick={(event) => {
+                    <button className="btn btn-danger" onClick={(event) => {
                         event.preventDefault();
                         deleteCourse(course._id);
                       }}>
                       Delete
                     </button>
-                    </Link>
-                  <p className="card-text">{course.name}</p>
-                  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="btn" style={{color: "gray"}}>
-                  <FaFileInvoice/>  </Link>
+                  </span>
                 </div>
               </div>
             </div>
