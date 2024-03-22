@@ -14,6 +14,11 @@ function AssignmentEditor()
   {
   const dispatch = useDispatch();
   const [thisTitle, setThisTitle] = useState('');
+  const [thisDescription, setThisDescription] = useState('');
+  const [thisPoints, setThisPoints] = useState('');
+  const [thisDueDate, setThisDueDate] = useState('');
+  const [thisFromDate, setThisFromDate] = useState('');
+  const [thisUntilDate, setThisUntilDate] = useState('');
   const { assignmentId } = useParams();
   const assignments = useSelector((state: KanbasState) => 
     state.assignmentsReducer.assignments);
@@ -22,13 +27,32 @@ function AssignmentEditor()
   const { courseId } = useParams();
   const navigate = useNavigate();
   const handleSave = () => {
+    const updatedAttributes: { [key: string]: any} = {};
+    if (thisTitle !== "") {
+      updatedAttributes.title = thisTitle;
+    } else { updatedAttributes.title = assignment.title; }
+    if (thisDescription !== "") {
+      updatedAttributes.description = thisDescription;
+    } else { updatedAttributes.description = assignment.description; }
+    if (thisPoints !== "") {
+      updatedAttributes.points = thisPoints;
+    } else { updatedAttributes.points = assignment.points; }
+    if (thisDueDate !== "") {
+      updatedAttributes.dueDate = thisDueDate;
+    } else { updatedAttributes.dueDate = assignment.dueDate; }
+    if (thisFromDate !== "") {
+      updatedAttributes.availableFromDate = thisFromDate;
+    } else { updatedAttributes.availableFromDate = assignment.availableFromDate; }
+    if (thisUntilDate !== "") {
+      updatedAttributes.availableUntilDate = thisUntilDate
+    } else { updatedAttributes.availableUntilDate = assignment.availableUntilDate}
+    
     if (assignment) {
-      if (thisTitle !== "") {
-        dispatch(updateAssignment({ _id: assignmentId, title: thisTitle }));
-      }
+      dispatch(updateAssignment({ _id: assignmentId, ...updatedAttributes }));
     } else {
-      dispatch(addAssignment({ title: thisTitle, course: courseId }));
+      dispatch(addAssignment({ ...updatedAttributes, course: courseId }));
     }
+    
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   
@@ -43,7 +67,7 @@ function AssignmentEditor()
       <h4>Assignment Name</h4>
       <input defaultValue={assignment?.title} onChange={(e) => setThisTitle(e.target.value)}
              className="form-control mb-2" />
-      <textarea className="form-control mb-2"></textarea>
+      <textarea className="form-control mb-2" defaultValue={assignment?.description} onChange={(e) => setThisDescription(e.target.value)}></textarea>
       <div className="row">
       <div className="col-md-3"></div>
       <div className="col-md">
@@ -53,7 +77,7 @@ function AssignmentEditor()
           Points
           </div>
           <div className="col-md">
-            <input type="number" max={100} min={0} className="form-control"/>
+            <input type="number" max={100} min={0} className="form-control" defaultValue={assignment?.points} onChange={(e) => setThisPoints(e.target.value)}/>
           </div>
         </div>
         <div className="row">
@@ -62,15 +86,15 @@ function AssignmentEditor()
           </div>
           <div className="col-md border rounded mt-3 mb-3">
             <div className="mt-2">Due</div>
-            <input type="date" name="" className="form-control" />
+            <input type="date" name="" className="form-control" defaultValue={assignment?.dueDate} onChange={(e) => setThisDueDate(e.target.value)}/>
             <div className="row">
             <div className="col-md-6 mt-3 mb-4">
               Available from
-              <input type="date" className="form-control" />
+              <input type="date" className="form-control" defaultValue={assignment?.availableFromDate} onChange={(e) => setThisFromDate(e.target.value)}/>
             </div>
             <div className="col-md-6 mt-3 mb-4">
             Until
-            <input className="form-control" type="date" defaultValue="2100-12-31"/>
+            <input className="form-control" type="date" defaultValue={assignment?.availableUntilDate} onChange={(e) => setThisUntilDate(e.target.value)}/>
             </div>
             </div>
           </div>
