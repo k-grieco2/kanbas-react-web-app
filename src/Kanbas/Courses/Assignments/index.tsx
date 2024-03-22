@@ -17,6 +17,11 @@ function Assignments() {
   const assignment = useSelector((state: KanbasState) => 
     state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
+  function check(assignmentId: any) {
+    if (window.confirm("Are you sure you want to remove this assignment?")) {
+      dispatch(deleteAssignment(assignmentId));
+    }
+  };
   return (
     <>
       <span>
@@ -58,7 +63,11 @@ function Assignments() {
                   </div>
                   <div className="col" style={{width: "10%"}}>
                   <span className="float-end">
-                  <span style={{color: "green"}}><FaCheckCircle /></span><FaEllipsisV /></span>
+                  <span style={{color: "green"}}><FaCheckCircle /></span><FaEllipsisV />
+                  <span>
+                    <button className="form-control" onClick={() => check(assignment._id)}>Delete</button>
+                  </span>
+                  </span>
                   </div>
                 </table>
                 
