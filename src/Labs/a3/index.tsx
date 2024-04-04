@@ -6,7 +6,6 @@ import Classes from "./Classes";
 import Styles from "./Styles";
 import Add from "./Add";
 import TodoList from "./todos/TodoList";
-import React from "react";
 import { useSelector } from "react-redux";
 import { LabState } from "../store";
 
