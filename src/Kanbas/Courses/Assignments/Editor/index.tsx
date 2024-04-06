@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { assignments } from "../../../Database";
 import { FaCheckCircle, FaEllipsisV } from "react-icons/fa";
 import {
   addAssignment,
   updateAssignment,
+  setAssignments,
 } from "../reducer";
+import * as client from "../client";
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from "../../../store";
 
@@ -22,39 +23,54 @@ function AssignmentEditor()
   const { assignmentId } = useParams();
   const assignments = useSelector((state: KanbasState) => 
     state.assignmentsReducer.assignments);
-  const assignment = assignments.find(
-    (assignment) => assignment._id === assignmentId);
+  const assignment = assignments.find(assignment => assignment._id === assignmentId);
   const { courseId } = useParams();
   const navigate = useNavigate();
   const handleSave = () => {
-    const updatedAttributes: { [key: string]: any} = {};
+    const updatedAssignment = {...assignment};
     if (thisTitle !== "") {
-      updatedAttributes.title = thisTitle;
-    } else { updatedAttributes.title = assignment.title; }
+      updatedAssignment.title = thisTitle;
+    } else { updatedAssignment.title = assignment.title; }
     if (thisDescription !== "") {
-      updatedAttributes.description = thisDescription;
-    } else { updatedAttributes.description = assignment.description; }
+      updatedAssignment.description = thisDescription;
+    } else { updatedAssignment.description = assignment.description; }
     if (thisPoints !== "") {
-      updatedAttributes.points = thisPoints;
-    } else { updatedAttributes.points = assignment.points; }
+      updatedAssignment.points = thisPoints;
+    } else { updatedAssignment.points = assignment.points; }
     if (thisDueDate !== "") {
-      updatedAttributes.dueDate = thisDueDate;
-    } else { updatedAttributes.dueDate = assignment.dueDate; }
+      updatedAssignment.dueDate = thisDueDate;
+    } else { updatedAssignment.dueDate = assignment.dueDate; }
     if (thisFromDate !== "") {
-      updatedAttributes.availableFromDate = thisFromDate;
-    } else { updatedAttributes.availableFromDate = assignment.availableFromDate; }
+      updatedAssignment.availableFromDate = thisFromDate;
+    } else { updatedAssignment.availableFromDate = assignment.availableFromDate; }
     if (thisUntilDate !== "") {
-      updatedAttributes.availableUntilDate = thisUntilDate
-    } else { updatedAttributes.availableUntilDate = assignment.availableUntilDate}
+      updatedAssignment.availableUntilDate = thisUntilDate
+    } else { updatedAssignment.availableUntilDate = assignment.availableUntilDate}
+    if (assignment._id) {
+      updatedAssignment._id = assignment._id;
+    } else { updatedAssignment._id = new Date().getTime; }
     
     if (assignment) {
-      dispatch(updateAssignment({ _id: assignmentId, ...updatedAttributes }));
+      const handleUpdateAssignment = async () => {
+        const status = await client.updateAssignment(updatedAssignment);
+        dispatch(updateAssignment(updatedAssignment));
+      };
+      handleUpdateAssignment();
     } else {
-      dispatch(addAssignment({ ...updatedAttributes, course: courseId }));
+      client.createAssignment(courseId, updatedAssignment).then((assignment) => {
+        dispatch(addAssignment(updatedAssignment));
+      });
     }
-    
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+  
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+    );
+  }, [courseId]);
+
   
   return (
     

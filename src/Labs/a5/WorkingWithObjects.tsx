@@ -11,8 +11,8 @@ function WorkingWithObjects() {
         id: 1, name: "Intro to Programming",
         description: "Python for beginners.", course: "CS5610",
     });
-    const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment";
-    const MODULE_URL = "http://localhost:4000/a5/module";
+    const ASSIGNMENT_URL = "https://kanbas-node-server-app-ch6c.onrender.com/a5/assignment";
+    const MODULE_URL = "https://kanbas-node-server-app-ch6c.onrender.com/a5/module";
     const fetchAssignment = async () => {
         const response = await axios.get(`${ASSIGNMENT_URL}`);
         setAssignment(response.data);
@@ -22,6 +22,15 @@ function WorkingWithObjects() {
           .get(`${ASSIGNMENT_URL}/title/${assignment.title}`);
         setAssignment(response.data);
     };
+    function update(checkbox: any) {
+        if(checkbox.checked == true) {
+            setAssignment({ ...assignment,
+                completed: true });
+        } else {
+            setAssignment({ ...assignment,
+                completed: false });
+        }
+    }
     useEffect(() => {
         fetchAssignment();
     }, []);    
@@ -57,8 +66,7 @@ function WorkingWithObjects() {
             </a>
             <br />
             <input type="checkbox" id="assignment_complete"
-                onChange={(e) => setAssignment({ ...assignment,
-                    completed: !assignment.completed})}
+                onClick={(e) => update(e.target)}
                      defaultChecked={assignment.completed}/>
             <label htmlFor="assignment_complete">Complete Assignment</label>
             <br />
@@ -83,27 +91,27 @@ function WorkingWithObjects() {
             </a>
             <br />
             <h4>Retrieving Objects</h4>
-            <a className="btn btn-primary" href="http://localhost:4000/a5/assignment">
+            <a className="btn btn-primary" href="https://kanbas-node-server-app-ch6c.onrender.com/a5/assignment">
                 Get Assignment
             </a>
-            <a className="btn btn-danger" href="http://localhost:4000/a5/module">
+            <a className="btn btn-danger" href="https://kanbas-node-server-app-ch6c.onrender.com/a5/module">
                 Get Module
             </a>
             <h4>Retrieving Properties</h4>
-            <a className="btn btn-primary" href="http://localhost:4000/a5/assignment/title">
+            <a className="btn btn-primary" href="https://kanbas-node-server-app-ch6c.onrender.com/a5/assignment/title">
                 Get Assignment Title
             </a>
-            <a className="btn btn-primary" href="http://localhost:4000/a5/assignment/score">
+            <a className="btn btn-primary" href="https://kanbas-node-server-app-ch6c.onrender.com/a5/assignment/score">
                 Get Assignment Score
             </a>
-            <a className="btn btn-primary" href="http://localhost:4000/a5/assignment/completed">
+            <a className="btn btn-primary" href="https://kanbas-node-server-app-ch6c.onrender.com/a5/assignment/completed">
                 Get Assignment Completion Status
             </a>
             <br />
-            <a className="btn btn-danger" href="http://localhost:4000/a5/module/name">
+            <a className="btn btn-danger" href="https://kanbas-node-server-app-ch6c.onrender.com/a5/module/name">
                 Get Module Title
             </a>
-            <a className="btn btn-danger" href="http://localhost:4000/a5/module/description">
+            <a className="btn btn-danger" href="https://kanbas-node-server-app-ch6c.onrender.com/a5/module/description">
                 Get Module Description
             </a>
         </div>

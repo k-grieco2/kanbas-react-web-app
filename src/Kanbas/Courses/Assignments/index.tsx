@@ -1,11 +1,14 @@
-import React from "react";
+import { useEffect } from "react";
 import { FaBook, FaCheckCircle, FaEllipsisV, FaPlus, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import {
   deleteAssignment,
+  setAssignments,
 } from "./reducer";
+import { findAssignmentsForCourse } from "./client";
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState } from "../../store";
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -14,11 +17,19 @@ function Assignments() {
   const assignment = useSelector((state: KanbasState) => 
     state.assignmentsReducer.assignment);
   const dispatch = useDispatch();
+  const handleDeleteAssignment = (assignmentId: string) => {
+    client.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
   function check(assignmentId: any) {
     if (window.confirm("Are you sure you want to remove this assignment?")) {
-      dispatch(deleteAssignment(assignmentId));
+      handleDeleteAssignment(assignmentId);
     }
   };
+  useEffect(() => {
+    findAssignmentsForCourse(courseId).then((assignments) => dispatch(setAssignments(assignments)));
+  }, [courseId]);
   return (
     <>
       <span>

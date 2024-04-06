@@ -9,21 +9,31 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 import Breadcrumb from 'rsuite/Breadcrumb';
+import axios from "axios";
 
 interface BreadcrumbItem {
   content: string;
   href: string;
 }
 
-function Courses({ courses }: { courses: any[]; }) {
+function Courses() {
   const { courseId } = useParams();
+  const COURSES_API = "https://kanbas-node-server-app-ch6c.onrender.com/api/courses";
   const location = useLocation();
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(
+        `${COURSES_API}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+      findCourseById(courseId);
+  }, [courseId]);
   const [breadcrumbItems, setBreadcrumbItems] = useState<BreadcrumbItem[]>([]);
   useEffect(() => {
     const pathSegments = location.pathname.split('/').filter(Boolean);
     let startIndex = 2
-    const courseId = pathSegments[2];
-    const course = courses.find(course => course._id === courseId);
     let assignmentName = '';
     if (pathSegments.length > 3) {
       const assignmentId = pathSegments[4];
@@ -32,7 +42,6 @@ function Courses({ courses }: { courses: any[]; }) {
         assignmentName = assignment.title;
       }
     }
-
     const newBreadcrumbItems = pathSegments.slice(startIndex).map((segment, index): BreadcrumbItem => {
       if (index === 0 && course) {
         return {
@@ -58,7 +67,6 @@ function Courses({ courses }: { courses: any[]; }) {
     });
     setBreadcrumbItems(newBreadcrumbItems);
   }, [location, courses, assignments]);
-  const course = courses.find((course) => course._id === courseId);
   return (
     <div>
       <h6 style={{padding: "5px"}}>
