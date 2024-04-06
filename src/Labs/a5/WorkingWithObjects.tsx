@@ -11,8 +11,9 @@ function WorkingWithObjects() {
         id: 1, name: "Intro to Programming",
         description: "Python for beginners.", course: "CS5610",
     });
-    const ASSIGNMENT_URL = "https://kanbas-node-server-app-ch6c.onrender.com/a5/assignment";
-    const MODULE_URL = "https://kanbas-node-server-app-ch6c.onrender.com/a5/module";
+    const API_BASE = process.env.REACT_APP_API_BASE;
+    const ASSIGNMENT_URL = `${API_BASE}/a5/assignment`;
+    const MODULE_URL = `${API_BASE}/a5/module`;
     const fetchAssignment = async () => {
         const response = await axios.get(`${ASSIGNMENT_URL}`);
         setAssignment(response.data);

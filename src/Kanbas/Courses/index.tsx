@@ -17,8 +17,9 @@ interface BreadcrumbItem {
 }
 
 function Courses() {
+  const API_BASE = process.env.REACT_APP_API_BASE;
   const { courseId } = useParams();
-  const COURSES_API = "https://kanbas-node-server-app-ch6c.onrender.com/api/courses";
+  const COURSES_API = `${API_BASE}/api/courses`;
   const location = useLocation();
   const [course, setCourse] = useState<any>({ _id: "" });
   const findCourseById = async (courseId?: string) => {

@@ -4,7 +4,8 @@ import { Checkbox } from "rsuite";
 
 function WorkingWithArrays() {
     const [errorMessage, setErrorMessage] = useState(null);
-    const API = "https://kanbas-node-server-app-ch6c.onrender.com/a5/todos";
+    const API_BASE = process.env.REACT_APP_API_BASE;
+    const API = `${API_BASE}/a5/todos`;
     const [todo, setTodo] = useState({
         id: 1,
         title: "NodeJS Assignment",
